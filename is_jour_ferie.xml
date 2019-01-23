@@ -14,7 +14,8 @@
           <group col="2" colspan="4">
             <field name="name"/> 
             <field name="date"/> 
-            <field name="jour_fixe"/> 
+            <field name="jour_fixe"/>
+            <field name="info_id"/> 
           </group>
         </sheet>
         </form>
@@ -31,7 +32,8 @@
          <tree string="jour_ferie">
             <field name="date"/> 
             <field name="name"/>
-            <field name="jour_fixe"/> 
+            <field name="jour_fixe"/>
+            <field name="info_id"/> 
         </tree>
       </field>
     </record>
@@ -46,6 +48,7 @@
         <field name="name"    filter_domain="[('name', 'ilike', self)]"/>
         <field name="date"/>
         <field name="jour_fixe"/>
+        <field name="info_id"/> 
         <group expand="0" string="Regroupé par...">
             <filter name="group_annee"     string="Année"    context="{'group_by':'date:year'}"/>
         </group>
@@ -56,7 +59,7 @@
 
     <!-- Action -->
     <record model="ir.actions.act_window" id="is_jour_ferie_action">
-      <field name="name">Jours Fériés</field>
+      <field name="name">Jours Fériés / Congés</field>
       <field name="res_model">is.jour.ferie</field>
       <field name="view_type">form</field>
       <field name="view_mode">tree,form</field>
@@ -67,7 +70,7 @@
 
 
 
-    <menuitem id="menu_is_pointage_jour_ferie"  sequence="40" name="Jours fériés"   parent="menu_is_pointage" action="is_jour_ferie_action" />
+    <menuitem id="menu_is_pointage_jour_ferie"  sequence="40" name="Jours fériés / Congés"   parent="menu_is_pointage" action="is_jour_ferie_action" />
 
   </data>
 </openerp>
