@@ -1,0 +1,17 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+access_is_badge_user,is.badge.user,model_is_badge,base.group_user,1,0,0,0
+access_is_badge_manager,is.badge.manager,model_is_badge,base.group_hr_manager,1,1,1,1
+
+access_is_pointage_user,is.pointage.user,model_is_pointage,base.group_user,1,0,0,0
+access_is_pointage_manager,is.pointage.manager,model_is_pointage,base.group_hr_manager,1,1,1,0
+
+access_is_jour_ferie_user,is.jour.ferie.user,model_is_jour_ferie,base.group_user,1,0,0,0
+access_is_jour_ferie_manager,is.jour.ferie.manager,model_is_jour_ferie,base.group_hr_manager,1,1,1,1
+
+access_is_pointage_anomalie,access_is_pointage_anomalie,model_is_pointage_anomalie,base.group_hr_manager,1,1,1,1
+access_is_pointage_commentaire,access_is_pointage_commentaire,model_is_pointage_commentaire,base.group_hr_manager,1,1,1,1
+
+access_is_heure_effective,access_is_heure_effective,model_is_heure_effective,base.group_hr_manager,1,1,1,1
+access_is_heure_effective_info,access_is_heure_effective_info,model_is_heure_effective_info,base.group_hr_manager,1,1,1,1
+

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<openerp>
+  <data>
+
+    <!-- Moule : formulaire standard -->
+    <record model="ir.ui.view" id="is_badge_form_view">
+      <field name="name">is_badge_form_view</field>
+      <field name="model">is.badge</field>
+      <field name="type">form</field>
+      <field name="arch" type="xml">
+        <!-- ATTENTION : Pour pouvoir utiliser la balise <sheet> qui permet d'avoir une plus 
+        belle mise en page il est obligatoire de mette 'version="7" -->
+        <form string="Form" version="7.0">  
+        <sheet>
+          <group col="2" colspan="4">
+            <field name="name"/> 
+            <field name="employee"/>
+          </group>
+        </sheet>
+        </form>
+      </field>
+    </record>
+
+
+    <!-- Moule : tree -->
+    <record model="ir.ui.view" id="is_badge_tree_view">
+      <field name="name">is_badge_tree_view</field>
+      <field name="model">is.badge</field>
+      <field name="type">tree</field>
+       <field name="arch" type="xml">
+        <tree string="badge">
+          <field name="employee"/>
+          <field name="name"/>
+        </tree>
+      </field>
+    </record>
+
+
+    <!-- Moule : Recherche -->
+    <record model="ir.ui.view" id="is_badge_filter_view" >
+      <field name="name">is_badge_filter_view</field>
+      <field name="model">is.badge</field>
+      <field name="arch" type="xml">
+      <search string="Recherche">
+        <field name="name"    filter_domain="[('name', 'ilike', self)]"/>
+        <field name="employee" />
+      </search>
+      </field>
+    </record>
+
+
+    <!-- Moule : action -->
+    <record model="ir.actions.act_window" id="is_badge_action">
+      <field name="name">Badges</field>
+      <field name="res_model">is.badge</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+
+    <menuitem id="menu_is_pointage"        sequence="20" name="Pointage" parent="hr.menu_hr_root"  />
+    <menuitem id="menu_is_pointage_badge"  sequence="10" name="Badges"   parent="menu_is_pointage" action="is_badge_action" />
+
+  </data>
+</openerp>
