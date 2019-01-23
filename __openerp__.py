@@ -1,23 +1,24 @@
 # -*- coding: utf-8 -*-
-
 {
-    'name': 'InfoSaône - Module Odoo Pointeuse',
-    'version': '1.0',
-    'category': 'InfoSaône',
-
-    'description': """
-InfoSaône - Module Odoo Pointeuse 
+  "name" : "InfoSaône - Module Odoo 8 Pointeuse BSA",
+  "version" : "0.1",
+  "author" : "InfoSaône / Tony Galmiche",
+  "category" : "InfoSaône\BSA",
+  'description': """
+InfoSaône - Module Odoo 8 Pointeuse BSA
 ===================================================
 
-Ce module permet d'exploiter les données issues d'un lecteur de badges pour le pointage du personnel
+InfoSaône - Module Odoo 8 Pointeuse BSA
 """,
-
-    'author': 'InfoSaône',
-    'maintainer': 'InfoSaône',
-    'website': 'http://www.infosaone.com',
-    'depends': ['hr'],
-    'data': [
-        "assets.xml",            # Permet d'ajouter des css et des js
+  'maintainer': 'InfoSaône',
+  'website': 'http://www.infosaone.com',
+  "depends" : [
+    "hr",
+  ], 
+  "init_xml" : [],
+  "demo_xml" : [],
+  "data" : [
+        "assets.xml",
         "res_config_view.xml",
         "is_badge.xml",
         "is_pointage.xml",
@@ -29,12 +30,9 @@ Ce module permet d'exploiter les données issues d'un lecteur de badges pour le 
         "security/ir.model.access.csv",
         "is_report.xml",
         "is_report_view.xml",
-    ],
-    'demo': [],
-    'installable': True,
-    'auto_install': False,
-    'application': True,
-    'images': [],
+  ],
+  "installable": True,
+  "active": False,
+  "application": True
 }
 
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
