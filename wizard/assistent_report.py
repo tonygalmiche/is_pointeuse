@@ -74,6 +74,7 @@ class assistent_report1(osv.osv_memory):
         #date_mois = datetime.datetime.strptime(report_data.end_date, '%Y-%m-%d').strftime('%d/%m/%Y')
 
         url = str(report_link)  + '?' \
+            + '&dbname='        + str(cr.dbname) \
             + '&type_rapport='  + str(report_data.type_rapport) \
             + '&date_jour='     + str(report_data.date_jour) \
             + '&date_mois='     + str(report_data.date_mois) \
@@ -84,6 +85,9 @@ class assistent_report1(osv.osv_memory):
             + '&saut_page='     + str(report_data.saut_page) \
             + '&date_debut='    + str(report_data.date_debut) \
             + '&date_fin='      + str(report_data.date_fin)
+
+        print cr.dbname, url
+
 
         return {
             'name'     : 'Go to website',
